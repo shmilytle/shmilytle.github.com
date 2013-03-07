@@ -49,6 +49,15 @@ function MM_swapImage() { //v3.0
 
 <body onload="MM_preloadImages('==%20YoungGe%20==_files/home32.jpg','==%20YoungGe%20==_files/home34.jpg','==%20YoungGe%20==_files/home36.jpg','==%20YoungGe%20==_files/home38.jpg')">
 
+
+  <h2>Article</h2>
+  <ul>
+    {% for post in site.posts %}
+      <li><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+
 <span id="liveclock"></span>
 
 
